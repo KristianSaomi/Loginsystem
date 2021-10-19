@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300&display=swap');
+body {
+    margin: 0px;
+    font-family: 'Poppins';
+
+}
+.parentDiv {
+display: flex;
+justify-content: space-between;
+align-items: center;
+text-align: center;
+    height: 100vh;
+    margin-right: 30px;
+    margin-left: 30px;
+
+}
+
+.childDiv1 {
+    margin-left: 30px;
+    width: 100vh;
+    height: auto;
+    text-align: left;
+    color: white;
+    font-size: 37px;
+    font-weight: bold;
+}
+.childDiv1 p {
+    margin-top: -30px;
+    font-weight: 300;
+    font-size: 25px;
+}
+
+.ourCustomerBtn {
+    padding: 10px 20px 10px 20px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    font-family: "Poppins";
+    font-size: 20px;
+    font-weight: 300;
+    transition: 250ms ease-in-out;
+}
+button {
+    padding: 10px 20px 10px 20px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    font-family: "Poppins";
+    font-size: 20px;
+    font-weight: 300;
+    transition: 250ms ease-in-out;
+}
+
+.ourAboutBtn{
+    padding: 10px 20px 10px 20px;
+    border: 1px solid #DE306B;
+    background-color: #DE306B;
+    color: white;
+    font-family: "Poppins";
+    font-size: 20px;
+    font-weight: 300;
+    transition: 250ms ease-in-out;
+    margin-left: 16px;
+    pointer: cursor;
+}
+
+.ourAboutBtn:hover {
+    transform: scale(1.12);
+}
+.ourCustomerBtn:hover {
+    transform: scale(1.12);
+    pointer: cursor;
+}
+.childDiv2 {
+    color: white;
+    font-weight: 300;
+    background-color: rgba(8, 169, 186, 0.62);
+    box-shadow: 1px 1px 20px 5px rgba(255, 255, 255, 0.34);
+    padding: 15px;
+    margin: 10px;
+    width: auto;
+    height: 50vh;
+}
+
+.childDiv2 table {
+text-align: left;
+color: white;
+    border-collapse: collapse;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+table th {
+text-align: left;
+padding-right: 20px;
+padding-left: 5px;
+padding-top: 5px;
+
+}
+
+.table td {
+
+}
+tr {
+    border-bottom: 1pt solid white;
+}

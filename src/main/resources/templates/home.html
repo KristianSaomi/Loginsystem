@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang = "en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer</title>
+    <link th:href="@{/cssAndJs/customer.css}" rel="stylesheet" />
+</head>
+<body th:style="'background: url(/cssAndJs/images/bckg1.png) no-repeat center center fixed;'">
+<div class = "parentDiv">
+
+    <div class = "childDiv1">
+        <h1>Lets Rock-up your customers!</h1>
+        <p>The best customer system in space</p>
+
+            <a th:href="@{/saveform}"><button  class ="ourCustomerBtn" >Add new customer</button></a>
+        <button class = "ourAboutBtn"> About us </button>
+    </div>
+
+    <div class = "childDiv2">
+        <table>
+            <thead>
+            <tr>
+                <th> Id</th>
+                <th> Firstname</th>
+                <th> Lastname</th>
+                <th> Age</th>
+                <th> Email</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="customer : ${getAllCustomer}">
+                <td th:text="${customer.id}"></td>
+                <td th:text="${customer.firstname}"></td>
+                <td th:text="${customer.lastname}"></td>
+                <td th:text="${customer.age}"></td>
+                <td th:text="${customer.email}"></td>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+</div>
+
+</body>
+</html>

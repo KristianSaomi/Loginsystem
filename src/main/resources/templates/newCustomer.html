@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang = "en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>new customer</title>
+</head>
+<body>
+<div>
+    <div>
+        <h1>Create your next customer</h1>
+        <hr>
+        <h2> Fill in the all field in the form to create an user</h2>
+        <form action="#" th:action="@{/save}" th:object="${saveCustomer}"
+              , method="POST" >
+            <input type="text" th:field ="*{firstname}"
+                   placeholder="Customer Firstname" required>
+            <input type="text" th:field ="*{lastname}"
+                   placeholder="Customer Lastname" required>
+            <input type="text" th:field ="*{email}"
+                   placeholder="Customer email" required>
+            <input type="text" th:field ="*{age}"
+                   placeholder="Customer age" required>
+            <div class = "buttongroup">
+                <a th:href="@{/home}">Back to home</a>
+                <button class = "saveBtn" type="submit">Save Customer</button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
