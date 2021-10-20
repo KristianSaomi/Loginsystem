@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<security:intercept-url pattern="/resources/**" access="permitAll" />
 <html lang = "en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Customer</title>
+    <title>Employe system</title>
     <link th:href="@{/cssAndJs/customer.css}" rel="stylesheet" />
 </head>
 <body th:style="'background: url(/cssAndJs/images/bckg1.png) no-repeat center center fixed;'">
@@ -13,8 +12,8 @@
         <h1>Lets Rock-up your customers!</h1>
         <p>The best customer system in space</p>
 
-            <a th:href="@{/saveform}"><button  class ="ourCustomerBtn" >Add new customer</button></a>
-        <button class = "ourAboutBtn"> About us </button>
+            <a th:href="@{/saveform}"><button  class ="ourCustomerBtn" >Lets Rock-employee</button></a>
+            <a th:href="@{/aboutUs}"><button class = "ourAboutBtn" > About us </button></a>
     </div>
 
     <div class = "childDiv2">

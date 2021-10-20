@@ -19,7 +19,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/", "/home").permitAll()
+                .antMatchers("/", "/home","/aboutUs").permitAll()
                 .anyRequest().authenticated()
                 .and()
                     .formLogin()
@@ -36,7 +36,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public void configure(WebSecurity web) throws Exception {
         web
                 .ignoring()
-                .antMatchers("/resources/**", "/static/**", "/cssAndJs/**", "/images/**", "customer.css/**", "login.css");
+                .antMatchers("/resources/**", "/static/**", "/cssAndJs/**", "/images/**", "customer.css/**", "login.css", "/aboutUs.css/**");
     }
 
     @Bean
