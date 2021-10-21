@@ -1,9 +1,6 @@
 package com.group8.userlogin.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Customer {
@@ -14,6 +11,8 @@ public class Customer {
     private String lastname;
     private String email;
     private int age;
+
+
 
     public Customer() {
 
