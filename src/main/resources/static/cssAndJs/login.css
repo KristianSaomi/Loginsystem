@@ -32,7 +32,41 @@ margin-left: 30px;
     background-color: #08a9ba;
     padding: 30px;
 }
+.formController {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.formController label {
+ font-size: 20px;
+    text-align: left;
 
-label {
-    font-size: 14px;
+}
+.inputlabel input {
+    width: 100%;
+    padding-top: 15px;
+    border: 1px solid white;
+}
+.inputlabel input:focus {
+    border-radius: 0px;
+}
+.inputBtn {
+    background-color: #DE306B;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    transition: 250ms ease-in;
+}
+
+.inputBtn:hover {
+    background-color: white;
+    color: black;
+}
+
+.ifparameters {
+    font-size: 17px;
+    color: #181439;
 }
