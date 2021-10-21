@@ -39,16 +39,15 @@
             <button data-close-button class="close-button" th:onClick="closeModal(modal)"> &times; </button>
         </div>
         <div class = "modal-body"> </div>
-        <form class ="model-body-form" th:action="@{/home}">
-            <input type ="text" placeholder="Compnay name" required>
-            <input type="text" placeholder="Your full name" required>
-            <input type="number" placeholder="Phone number+46" required>
+        <form class ="model-body-form" th:action="@{/thankyou}">
+            <input type ="text" placeholder="Company name" name ="companyName" required>
+            <input type="text" placeholder="Your full name" required name="fullname">
+            <input type="number" placeholder="Phone number+46" required name ="phone">
             <button class ="submitContact" type="submit">Contact me!</button>
 
         </form>
     </div>
     <div  id="overlay"> </div>
-
 
 </div>
 

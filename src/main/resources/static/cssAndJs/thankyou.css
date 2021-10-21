@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300&display=swap');
+
+body {
+    background-color: #181439;
+    font-family: 'Poppins';
+    color: white;
+}
+
+.parentDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}

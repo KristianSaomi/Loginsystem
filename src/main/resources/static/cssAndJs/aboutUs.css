@@ -123,6 +123,7 @@ body {
     background-color: #08a9ba;
     width: 500px;
     max-width: 80%;
+    box-shadow: 1px 1px 10px 3px;
 }
 
 .modal.active {
@@ -145,9 +146,13 @@ body {
     border: none;
     outline: none;
     background: none;
-    font-size: 1.25rem;
+    font-size: 2rem;
     font-weight: bold;
     color: white;
+    transition: 250ms ease-in-out;
+}
+.modal-header .close-button:hover {
+    color: black;
 }
 
 .modal-body{
@@ -208,3 +213,4 @@ submitContact:hover {
     background-color: white;
     color: black;
 }
+

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang = "en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee System - Thank you for contacting us</title>
+    <link th:href="@{/cssAndJs/thankyou.css}" rel="stylesheet" />
+</head>
+<div class = "parentDiv">
+    <div>
+        <h1> Thank you <span th:text="${param.fullname}" /> </h1>
+            <p> We will contact you at the number <span th:text="${param.phone}"></span></p>
+            <a th:href="@{/home}"><button class = "ourAboutBtn" > Back to homepage </button></a>
+    </div>
+
+</div>
+<body>
+
+</body>
+</html>
