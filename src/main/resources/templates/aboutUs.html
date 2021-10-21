@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang = "en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee system</title>
+    <link th:href="@{/cssAndJs/aboutUs.css}" rel="stylesheet" />
+</head>
+<body>
+<div class = "parentDiv">
+
+
+    <div class = "childDiv1">
+        <p class = "breadcrumb"> <a  th:href="@{/home}">Home</a> / About us</p>
+        <h1> We started back in the 90's #StiStudents</h1>
+        <hr>
+        <p> Back in 1994 we started Rock-employee, the sigificant emplyee system that never made it to market.
+            But you guys can call us the group 8, a team of 4 uniqe developer.In any big case we are the best of the best developers
+            trust me on this and just contact us for the best bla bla bla bla bla bla bla bla bla bla bla<br> <br>
+            <a><b>Team members:</b> Johanna, Kristian, Suayb, Tobias.</a>
+        </p>
+        <a th:href="'mailto:info@employeesystem.se'"><button class = "backHome" >Become a customer</button></a>
+        <a th:href="@{/home}"><button  class ="contactUs" >Back to home</button></a>
+
+
+
+    </div>
+
+    <div class = "childDiv2">
+        <img th:src="@{/cssAndJs/images/team.png}"/>
+    </div>
+
+
+</div>
+
+</body>
+</html>

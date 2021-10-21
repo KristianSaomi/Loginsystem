@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300&display=swap');
+body {
+    background-color: #181439;
+    font-family: 'Poppins';
+}
+
+.parentDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    margin-right: 30px;
+    margin-left: 30px;
+
+}
+.breadcrumb {
+    color: white;
+    font-size: 10px;
+    text-decoration: none;
+}
+.breadcrumb a {
+    text-decoration: none;
+}
+.childDiv1 {
+    margin-left: 60px;
+    margin-right: 10px;
+    width: 90vh;
+    height: auto;
+    text-align: left;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+.childDiv1 hr {
+    text-align: start;
+    width: 30%;
+    height: 3px;
+    border: none;
+    background-color: #DE306B;
+    margin: 0;
+}
+.childDiv1 p {
+    font-weight: 300;
+    font-size: 20px;
+
+}
+
+.childDiv1 p a {
+    color:#08a9ba;
+    transition: 250ms ease-in;
+}
+.childDiv1 p a:hover {
+    color: #DE306B;
+}
+
+
+.backHome {
+    padding: 10px 20px 10px 20px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    font-family: "Poppins";
+    font-size: 20px;
+    font-weight: 300;
+    transition: 250ms ease-in-out;
+}
+.backHome:hover {
+    transform: scale(1.12);
+}
+.contactUs{
+    padding: 10px 20px 10px 20px;
+    border: 1px solid #DE306B;
+    background-color: #DE306B;
+    color: white;
+    margin-left: 10px;
+    font-family: "Poppins";
+    font-size: 20px;
+    font-weight: 300;
+    transition: 250ms ease-in-out;
+    pointer: cursor;
+}
+.contactUs:hover {
+    transform: scale(1.12);
+}
+
+.childDiv2 {
+    color: white;
+    font-weight: 300;
+    background-color: rgba(8, 169, 186, 0.62);
+    box-shadow: 1px 1px 20px 5px rgba(255, 255, 255, 0.34);
+    padding: 15px;
+    margin: 60px;
+    width: 40%;
+    height: 50%;
+}
+.childDiv2 img {
+    height: 100%;
+    width: 100%;
+    margin-top: 10px;
+    margin-right: 30px;
+
+}

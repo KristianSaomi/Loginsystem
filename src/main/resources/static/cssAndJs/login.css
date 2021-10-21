@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300&display=swap');
+
+body {
+    font-family: 'Poppins';
+    background-color: #181439;
+}
+
+childDiv1 h1 {
+    font-size: 25px;
+    margin: 0px;
+}
+childDiv1 p {
+font-size: 17px;
+}
+
+.parentDiv {
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+height: 100vh;
+margin-right: 30px;
+margin-left: 30px;
+}
+.childDiv1 {
+    width: 100vh;
+    height: auto;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #08a9ba;
+    padding: 30px;
+}
+
+label {
+    font-size: 14px;
+}
