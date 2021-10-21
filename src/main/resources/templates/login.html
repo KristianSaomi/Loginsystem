@@ -10,19 +10,20 @@
 
     <h1>You are one step closer</h1>
    <p> Please log in to acess a new paradise</p>
-    <div th:if="${param.error}"> Invalid username and password. </div>
-    <div th:if="${param.logout}"> You have been logged out. </div>
+    <div class = "ifparameters"th:if="${param.error}"> Invalid username and password. </div>
+    <div class = "ifparameters" th:if="${param.logout}"> You have been logged out. </div>
 
-
+<div class ="formController">
 <form th:action="@{/login}" method="post">
-    <div><label> User Name : </label></div>
-    <div><input type="text" name="username"/></div>
+    <div><label class = "inputlabel"> User Name : </label></div>
+    <div><input class = "inputlabel" type="text" name="username"/></div>
 
     <div><label> Password: </label></div>
     <div> <input type="password" name="password"/></div>
 
-    <div><input type="submit" value="Sign In"/></div>
+    <div><input class ="inputBtn" type="submit" value="Sign In"/></div>
 </form>
+</div>
  </div>
 </div>
 </body>
