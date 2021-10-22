@@ -44,21 +44,29 @@ margin-left: 30px;
     text-align: left;
 
 }
-.inputlabel input {
-    width: 100%;
-    padding-top: 15px;
+
+.inputtype {
+    width: 95%;
+    padding-top: 5px;
+    padding-bottom: 5px;
     border: 1px solid white;
+    font-family: 'poppins';
+    margin-bottom: 10px;
 }
-.inputlabel input:focus {
+.inputtype:focus {
+    border: 0px;
     border-radius: 0px;
 }
 .inputBtn {
+    font-family: 'Poppins';
     background-color: #DE306B;
     color: white;
     width: 100%;
     padding: 10px;
     border: none;
     transition: 250ms ease-in;
+    font-size: 17px;
+
 }
 
 .inputBtn:hover {
@@ -68,5 +76,17 @@ margin-left: 30px;
 
 .ifparameters {
     font-size: 17px;
+    color: #181439;
+}
+.breadcrumb {
+    font-size: 25px;
+}
+.breadcrumb a {
+    color: #DE306B;
+    text-decoration: none;
+    transition: 250ms ease-in;
+}
+
+.breadcrumb a:hover {
     color: #181439;
 }

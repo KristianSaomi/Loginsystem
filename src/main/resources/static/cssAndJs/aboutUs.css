@@ -209,8 +209,11 @@ body {
     margin-bottom: 30px;
     transition: 250ms ease-in-out;
 }
-submitContact:hover {
+.submitContact:hover {
     background-color: white;
     color: black;
+    transform: scale(1.2);
 }
-
+form submitContact:hover {
+    transform: scale(1.2);
+}
