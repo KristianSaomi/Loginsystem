@@ -39,6 +39,16 @@ public class CustomerController {
         return "redirect:/home";
     }
 
+    @RequestMapping("/delete/{id}")
+    public String deleteCustomer(@PathVariable long id) {
+        return customerService.deleteCustomer(id);
+    }
+
+    @PutMapping("/update")
+    public Customer updateCustomer(@RequestBody Customer customer) {
+        return customerService.updateCustomer(customer);
+    }
+
 
     /*private static Logger logger = Logger.getLogger();
 

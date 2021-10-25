@@ -12,8 +12,6 @@ public class CustomerServiceImplementation implements CustomerService{
     @Autowired
     private CustomerRespository customerRespository;
 
-
-
     @Override
     public List<Customer> getAllCustomerList(){
         return customerRespository.findAll();
@@ -24,6 +22,21 @@ public class CustomerServiceImplementation implements CustomerService{
         customerRespository.save(customer);
     }
 
+    @Override
+    public Customer updateCustomer(Customer customer) {
+        Customer exitingCustomer = customerRespository.findById(customer.getId()).orElse((null));
+        exitingCustomer.setFirstname(customer.getFirstname());
+        exitingCustomer.setLastname(customer.getLastname());
+        exitingCustomer.setAge(customer.getAge());
+        exitingCustomer.setEmail(customer.getEmail());
+        return customerRespository.save(exitingCustomer);
+    }
+
+    @Override
+    public String deleteCustomer(long id) {
+        customerRespository.deleteById(id);
+        return "Delete " + id;
+    }
 
 
 }
