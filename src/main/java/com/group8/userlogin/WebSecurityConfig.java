@@ -30,13 +30,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll();
 
 
+
     }
 
     @Override
     public void configure(WebSecurity web) throws Exception {
         web
                 .ignoring()
-                .antMatchers("/resources/**", "/static/**", "/cssAndJs/**", "/images/**", "customer.css/**", "login.css/**", "/aboutUs.css/**","/js/**","/modalAboutUs.js/**", "/thankyou");
+                .antMatchers("/resources/**", "/static/**", "/cssAndJs/**", "/images/**", "customer.css/**", "login.css/**", "/aboutUs.css/**","/js/**","/modalAboutUs.js/**", "/thankyou", "/newCustomer");
     }
 
     @Bean
@@ -53,6 +54,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
         return new InMemoryUserDetailsManager(user);
     }
+
 
 
 

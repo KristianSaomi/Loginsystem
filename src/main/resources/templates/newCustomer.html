@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang = "en" xmlns:th="http://www.thymeleaf.org">
+<link th:href="@{/cssAndJs/newCustomer.css}" rel="stylesheet" />
 <head>
     <meta charset="UTF-8">
     <title>new customer</title>
 </head>
 <body>
-<div>
-    <div>
+<div class ="parentDiv">
+    <div class ="childDiv">
+        <p class = "breadcrumb"> <a  th:href="@{/home}">Home</a> / <a  th:href="@{/login}">Login</a> / About us</p>
         <h1>Create your next customer</h1>
         <hr>
-        <h2> Fill in the all field in the form to create an user</h2>
+        <h2 class="undertext"> Fill in the all fields in the form to create an user</h2>
         <form action="#" th:action="@{/save}" th:object="${saveCustomer}"
               , method="POST" >
             <input type="text" th:field ="*{firstname}"
@@ -18,10 +20,9 @@
                    placeholder="Customer Lastname" required>
             <input type="text" th:field ="*{email}"
                    placeholder="Customer email" required>
-            <input type="text" th:field ="*{age}"
-                   placeholder="Customer age" required>
+            <input type="number" th:field ="*{age}"
+                   placeholder="Customer age" required min="1" max="100">
             <div class = "buttongroup">
-                <a th:href="@{/home}">Back to home</a>
                 <button class = "saveBtn" type="submit">Save Customer</button>
             </div>
         </form>
