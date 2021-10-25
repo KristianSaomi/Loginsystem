@@ -40,8 +40,10 @@ public class CustomerController {
     }
 
     @RequestMapping("/delete/{id}")
-    public String deleteCustomer(@PathVariable long id) {
-        return customerService.deleteCustomer(id);
+    public String deleteCustomer(@PathVariable long id, Model model) {
+        String customer = customerService.deleteCustomer(id);
+        model.addAttribute("customer", customer);
+        return "delete";
     }
 
     @GetMapping("/showFormForUpdate/{id}")
