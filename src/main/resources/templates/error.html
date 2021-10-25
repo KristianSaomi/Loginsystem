@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang = "en" xmlns:th="http://www.thymeleaf.org">
+<link th:href="@{/cssAndJs/error.css}" rel="stylesheet" />
 <head>
     <meta charset="UTF-8">
-    <title>Employee system</title>
-    <link th:href="@{/cssAndJs/edit.css}" rel="stylesheet" />
+    <title>Title</title>
+    <div class ="parent">
+        <div class ="child">
+  <h1> Your out of bound</h1>
+            <hr>
+    <h2> Please press here to get back to home page</h2>
+            <a th:href="@{/home}"><button>Homepage</button></a>
+        </div>
+    </div>
 </head>
 <body>
-<h1> Lol your out of bound</h1>
+
 </body>
 </html>

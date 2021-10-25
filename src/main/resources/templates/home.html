@@ -22,9 +22,15 @@
             <button class ="adminBtn">Edit customers</button>
         </a>
 
+        <div class ="magicText" th:switch="${#authentication}? ${#authorization.expression('isAuthenticated()')} : ${false}">
+            <span th:case="${false}">Login and se the magic appear</span>
+            <span th:case="${true}"></span>
+            <span th:case="*">Should never happen, but who knows...</span>
+        </div>
+
     </div>
-    <div  class = "childDiv2"  >
-        <div sec:authorize="isAuthenticated()" >
+    <div  class = "childDiv2" sec:authorize="isAuthenticated()" >
+        <div  >
         <table >
             <thead>
             <tr>
@@ -48,6 +54,7 @@
         </table>
         </div>
     </div>
+    <a th:href="@{/logout}"><button sec:authorize="isAuthenticated()" class = "logoutBtn" > Logout </button></a>
 
 </div>
 

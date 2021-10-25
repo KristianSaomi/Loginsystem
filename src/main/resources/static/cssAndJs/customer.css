@@ -109,13 +109,13 @@ tr {
 }
 .arrowImg {
     position: absolute;
-    left: 550px;
+    left: 580px;
     transform: rotate(75deg);
     bottom: 350px;
 }
 .arrowPic {
-    width: 280px;
-    height: 280px;
+    width: 260px;
+    height: 260px;
 }
 .demoText {
     font-size: 18px !important;
@@ -134,4 +134,30 @@ tr {
 .adminBtn:hover {
     transform: scale(1.12);
     pointer: cursor;
+}
+
+.magicText {
+    font-size: 30px;
+    position: absolute;
+    left: 800px;
+    bottom: 350px;
+}
+.logoutBtn {
+    float: right;
+    padding: 5px 10px 5px 10px;
+    background-color: white;
+    color: #181439;
+    font-size: 20px;
+    font-family: 'Poppins';
+    margin-top: 10px;
+    margin-right: 10px;
+    position:absolute;
+    top:0;
+    right: 5px;
+    transition: 250ms ease-in-out;
+}
+.logoutBtn:hover {
+    transform: scale(1.2);
+    background-color: #08a9ba;
+    color: white;
 }
