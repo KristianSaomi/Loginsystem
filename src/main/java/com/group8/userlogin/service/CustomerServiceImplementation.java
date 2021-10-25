@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.Optional;
 
 @Component
 public class CustomerServiceImplementation implements CustomerService{
@@ -38,6 +39,17 @@ public class CustomerServiceImplementation implements CustomerService{
         return "Delete " + id;
     }
 
+    @Override
+    public Customer getCustomerById(long id) {
+        Optional<Customer> optional = customerRespository.findById(id);
+        Customer customer = null;
+        if (optional.isPresent()) {
+            customer = optional.get();
+        }else {
+            throw new RuntimeException("Employe not found for id: " + id);
+        }
+        return customer;
+    }
 
 }
 

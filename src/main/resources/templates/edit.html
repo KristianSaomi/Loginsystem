@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang = "en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class ="parentDiv">
+        <div class ="childDiv" >
+            <form action="#"  th:object="${customer}"
+                  method="POST">
+            <p class = "breadcrumb"> <a  th:href="@{/home}">Home</a> / <a  th:href="@{/login}">Login</a> / About us</p>
+            <input type="hidden" th:field="*{id}" />
+            <input type="text" th:field="*{firstname}" >
+            <input type="text" th:field="*{lastname}" >
+            <input type="text" th:field="*{email}" >
+            <button type="submit" > Update Employee</button>
+                <form/>
+        </div>
+    </div>
+</body>
+</html>

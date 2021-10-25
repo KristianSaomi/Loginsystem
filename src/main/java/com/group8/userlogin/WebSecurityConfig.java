@@ -19,7 +19,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/", "/home","/aboutUs","/error","/thankyou", "/delete/{id}").permitAll()
+                .antMatchers("/", "/home","/aboutUs","/error","/thankyou").permitAll()
                 .anyRequest().authenticated()
                 .and()
                     .formLogin()
@@ -47,7 +47,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 User.withDefaultPasswordEncoder()
                         .username("user")
                         .password("password")
-                        .roles("USER")
+                        .roles("ADMIN")
                         .build();
 
 

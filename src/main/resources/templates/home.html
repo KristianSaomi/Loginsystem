@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang = "en" xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">>
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
     <meta charset="UTF-8">
     <title>Employe system</title>
@@ -17,9 +17,13 @@
         <p>The best customer system in space</p>
 
             <a th:href="@{/saveform}"><button  class ="ourCustomerBtn" >Lets Rock-employee</button></a>
+            <a th:href="@{/edit}" sec:authorize="hasRole('ROLE_ADMIN')">
+                <button class ="ourCustomerBtn">Edit employees</button>
+            </a>
             <a th:href="@{/aboutUs}"><button class = "ourAboutBtn" > About us </button></a>
     </div>
-    <div  class = "childDiv2" >
+    <div  class = "childDiv2"  >
+        <div sec:authorize="isAuthenticated()" >
         <table >
             <thead>
             <tr>
@@ -41,6 +45,7 @@
             </tr>
             </tbody>
         </table>
+        </div>
     </div>
 
 </div>

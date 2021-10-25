@@ -44,9 +44,13 @@ public class CustomerController {
         return customerService.deleteCustomer(id);
     }
 
-    @PutMapping("/update")
-    public Customer updateCustomer(@RequestBody Customer customer) {
-        return customerService.updateCustomer(customer);
+    @GetMapping("/showFormForUpdate/{id}")
+    public String showFormForUpdate(@PathVariable (value = "id") long id, Model model){
+//Get customer from the service
+        Customer customer = customerService.getCustomerById(id);
+        //Set customer as a model attribute to pre-populate the form
+        model.addAttribute("customer", customer);
+        return "edit";
     }
 
 
