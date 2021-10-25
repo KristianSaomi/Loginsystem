@@ -21,8 +21,12 @@ text-align: center;
     height: auto;
     text-align: left;
     color: white;
-    font-size: 37px;
+}
+.childDiv1 h1{
+    font-size: 55px;
     font-weight: bold;
+    color: white;
+    margin-top: 0;
 }
 .childDiv1 p {
     margin-top: -30px;
@@ -102,4 +106,21 @@ padding-top: 5px;
 }
 tr {
     border-bottom: 1pt solid white;
+}
+.arrowImg {
+    position: absolute;
+    left: 550px;
+    transform: rotate(75deg);
+    bottom: 350px;
+}
+.arrowPic {
+    width: 280px;
+    height: 280px;
+}
+.demoText {
+    font-size: 18px !important;
+    text-space: 3px;
+    font-weight: 200 !important;
+    color: white !important;
+    margin: 0px !important;
 }
