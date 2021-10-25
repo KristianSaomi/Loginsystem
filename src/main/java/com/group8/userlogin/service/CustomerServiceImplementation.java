@@ -29,8 +29,10 @@ public class CustomerServiceImplementation implements CustomerService{
         Customer customer = null;
         if (optional.isPresent()) {
             customer = optional.get();
+
         }else {
-            throw new RuntimeException("Employe not found for id: " + id);
+            throw new RuntimeException("Customer not found for id: " + id);
+
         }
         return customer;
     }

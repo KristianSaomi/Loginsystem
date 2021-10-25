@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang = "en" xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
 <div class = "parentDiv">
     <div class = "childDiv">
         <h1> Employee list</h1>
@@ -24,13 +16,13 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr th:each="customer : ${getAllCustomer}">
+                <tr th:each="customer : ${getAllCustomerss}">
                     <td th:text="${customer.id}"></td>
                     <td th:text="${customer.firstname}"></td>
                     <td th:text="${customer.lastname}"></td>
                     <td th:text="${customer.email}"></td>
                     <td> <a  class = "editerBtn" th:href="@{/updateCustomer/{id}(id=${customer.id})}">Update</a>
-                        <a  class = "deletorBtn" th:href="@{/deleteEmployee/{id}(id=${customer.id})}">Delete</a>
+                        <a  class = "deletorBtn" th:href="@{/deleteCustomer/{id}(id=${customer.id})}">Delete</a>
                     </td>
 
                 </tr>
@@ -40,5 +32,3 @@
         </div>
     </div>
 </div>
-</body>
-</html>

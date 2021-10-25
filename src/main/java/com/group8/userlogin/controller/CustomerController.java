@@ -25,6 +25,12 @@ public class CustomerController {
         return "home";
     }
 
+    @RequestMapping("/edit")
+    public String getAllCustomes(Model model) {
+        model.addAttribute("getAllCustomerss", customerService.getAllCustomerList());
+        return "edit";
+    }
+
 
     @RequestMapping("/saveform")
     public String saveform(Model model) {
@@ -39,20 +45,20 @@ public class CustomerController {
         return "redirect:/home";
     }
 
-    @RequestMapping("/delete/{id}")
-    public String deleteCustomer(@PathVariable long id, Model model) {
-        String customer = customerService.deleteCustomer(id);
-        model.addAttribute("customer", customer);
-        return "delete";
+    @GetMapping("/deleteCustomer/{id}")
+    public String deleteEmployee(@PathVariable (value = "id") long id) {
+        //Call delete employee method
+        this.customerService.deleteCustomerById(id);
+        return "redirect:/home";
     }
 
-    @GetMapping("/showFormForUpdate/{id}")
+    @GetMapping("/updateCustomer/{id}")
     public String showFormForUpdate(@PathVariable (value = "id") long id, Model model){
 //Get customer from the service
         Customer customer = customerService.getCustomerById(id);
         //Set customer as a model attribute to pre-populate the form
         model.addAttribute("customer", customer);
-        return "edit";
+        return "updateCustomer";
     }
 
 
