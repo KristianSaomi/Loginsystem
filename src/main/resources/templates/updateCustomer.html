@@ -25,7 +25,7 @@
                    placeholder="Customer Last Name" required>
 
             <input type="number" th:field ="*{age}"
-                   placerholder ="Customer Age" required>
+                   placerholder ="Customer Age" required required min="1" max="100">
 
             <input type="email" th:field ="*{email}"
                    placeholder="Customer email" required>
