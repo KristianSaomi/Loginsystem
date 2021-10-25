@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300&display=swap');
+
+body {
+    font-family: 'Poppins';
+    background-color: #181439;
+    color: white;
+    margin: 0;
+}
+.parentDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+.childDiv {
+    background-color: #08a9ba;
+    padding: 15px;
+    margin: 10px;
+    width: auto;
+    height: auto;
+}
+.tableofusers table {
+    text-align: left;
+    color: white;
+    border-collapse: collapse;
+    padding-top: 6px;
+    padding-bottom: 6px;
+
+}
+thead {
+    padding-left: 10px;
+}
+
+.table td {
+padding-left: 10px;
+}
+tr {
+    border-bottom: 1px solid white;
+}
+
+.breadcrumb {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.breadcrumb a {
+    color: #DE306B;
+    transition: 250ms ease-in-out;
+    text-decoration: none;
+}
+.breadcrumb a:hover {
+    color: #181439;
+}
+
+table .editerBtn {
+    font-family: 'Poppins';
+    color: #DE306B;
+    font-weight: bold;
+    transition: 250ms ease-in-out;
+}
+table .editerBtn:hover {
+    font-family: 'Poppins';
+    color: #181439;
+    font-weight: 700;
+}
+
+table .deletorBtn {
+    font-family: 'Poppins';
+    color: #181439;
+    font-weight: 700;
+    transition: 250ms ease-in-out;
+}
+table .deletorBtn:hover {
+    font-family: 'Poppins';
+    color: #DE306B;
+    font-weight: 700;
+}

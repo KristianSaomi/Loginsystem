@@ -124,3 +124,14 @@ tr {
     color: white !important;
     margin: 0px !important;
 }
+.adminBtn {
+    background-color: #08a9ba;
+    margin-left: 16px;
+    border: 1px solid #08a9ba ;
+    transition: 250ms ease-in-out;
+
+}
+.adminBtn:hover {
+    transform: scale(1.12);
+    pointer: cursor;
+}

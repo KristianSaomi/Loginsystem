@@ -1,7 +1,16 @@
+<!DOCTYPE html>
+<html lang = "en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee system</title>
+    <link th:href="@{/cssAndJs/edit.css}" rel="stylesheet" />
+</head>
+<body>
 <div class = "parentDiv">
     <div class = "childDiv">
-        <h1> Employee list</h1>
-        <h3> This is all of our employes</h3>
+        <p class = "breadcrumb"> <a  th:href="@{/home}">Home</a> / Edit customers</p>
+        <h1> Your authorized to edit</h1>
+        <h3> Select which user you want to edit</h3>
 
         <div class = "tableofusers">
             <table>
@@ -32,3 +41,5 @@
         </div>
     </div>
 </div>
+</body>
+</html>

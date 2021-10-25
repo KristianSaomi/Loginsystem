@@ -2,29 +2,34 @@
 <html lang = "en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Employee system - Updating customer</title>
+    <link th:href="@{/cssAndJs/updateCustomer.css}" rel="stylesheet" />
+
 </head>
 <body>
 <div class = "ParentDiv">
     <div class = "childDiv">
-        <h1>Update your employe</h1>
+        <p class = "breadcrumb"> <a  th:href="@{/home}">Home</a> <a  th:href="@{/updateCustomer.html}">/ Update customer </a> / Editing a customer </p>
+        <h1>Update your Customer</h1>
         <hr>
-        <h2> Below you find the user your currently updating</h2>
+        <h2> Below you find the user you'r currently updating</h2>
         <form class = "userBuilder" action="#" th:action="@{/save}" th:object="${customer}"
               , method="POST" >
 
             <!-- Add hidden form field to handle update -->
             <input type ="hidden" th:field="*{id}">
             <input type="text" th:field ="*{firstname}"
-                   placeholder="Employee First Name" required>
+                   placeholder="Customer First Name" required>
 
             <input type="text" th:field ="*{lastname}"
-                   placeholder="Employee Last Name" required>
+                   placeholder="Customer Last Name" required>
 
-            <input type="text" th:field ="*{email}"
-                   placeholder="Employee email" required>
+            <input type="number" th:field ="*{age}"
+                   placerholder ="Customer Age" required>
+
+            <input type="email" th:field ="*{email}"
+                   placeholder="Customer email" required>
             <div class = "buttongroup">
-                <a class ="linkhomebtn" th:href="@{/home}">Back to home</a>
                 <button class = "saveBtn" type="submit">Save employee</button>
             </div>
         </form>
