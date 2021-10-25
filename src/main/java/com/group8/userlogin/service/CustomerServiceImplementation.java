@@ -24,22 +24,6 @@ public class CustomerServiceImplementation implements CustomerService{
     }
 
     @Override
-    public Customer updateCustomer(Customer customer) {
-        Customer exitingCustomer = customerRespository.findById(customer.getId()).orElse((null));
-        exitingCustomer.setFirstname(customer.getFirstname());
-        exitingCustomer.setLastname(customer.getLastname());
-        exitingCustomer.setAge(customer.getAge());
-        exitingCustomer.setEmail(customer.getEmail());
-        return customerRespository.save(exitingCustomer);
-    }
-
-    @Override
-    public String deleteCustomer(long id) {
-        customerRespository.deleteById(id);
-        return "Delete " + id;
-    }
-
-    @Override
     public Customer getCustomerById(long id) {
         Optional<Customer> optional = customerRespository.findById(id);
         Customer customer = null;
@@ -49,6 +33,11 @@ public class CustomerServiceImplementation implements CustomerService{
             throw new RuntimeException("Employe not found for id: " + id);
         }
         return customer;
+    }
+
+    @Override
+    public void deleteCustomerById(long id) {
+        this.customerRespository.deleteById(id);
     }
 
 }

@@ -6,18 +6,39 @@
     <title>Title</title>
 </head>
 <body>
-    <div class ="parentDiv">
-        <div class ="childDiv" >
-            <form action="#"  th:object="${customer}"
-                  method="POST">
-            <p class = "breadcrumb"> <a  th:href="@{/home}">Home</a> / <a  th:href="@{/login}">Login</a> / About us</p>
-            <input type="hidden" th:field="*{id}" />
-            <input type="text" th:field="*{firstname}" >
-            <input type="text" th:field="*{lastname}" >
-            <input type="text" th:field="*{email}" >
-            <button type="submit" > Update Employee</button>
-                <form/>
+<div class = "parentDiv">
+    <div class = "childDiv">
+        <h1> Employee list</h1>
+        <h3> This is all of our employes</h3>
+
+        <div class = "tableofusers">
+            <table>
+                <thead>
+                <tr>
+                    <th> Id</th>
+                    <th> First Name</th>
+                    <th> Last name</th>
+                    <th> Email</th>
+                    <th> Actions</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="customer : ${getAllCustomer}">
+                    <td th:text="${customer.id}"></td>
+                    <td th:text="${customer.firstname}"></td>
+                    <td th:text="${customer.lastname}"></td>
+                    <td th:text="${customer.email}"></td>
+                    <td> <a  class = "editerBtn" th:href="@{/updateCustomer/{id}(id=${customer.id})}">Update</a>
+                        <a  class = "deletorBtn" th:href="@{/deleteEmployee/{id}(id=${customer.id})}">Delete</a>
+                    </td>
+
+                </tr>
+                </tbody>
+            </table>
+
         </div>
     </div>
+</div>
 </body>
 </html>
