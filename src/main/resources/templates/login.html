@@ -7,7 +7,7 @@
 <body>
 <div class = "parentDiv">
  <div class = "childDiv1">
-
+     <p class = "breadcrumb"><a th:href="@{/home}">Home</a> / Login page</p>
     <h1>You are one step closer</h1>
    <p> Please log in to acess a new paradise</p>
     <div class = "ifparameters"th:if="${param.error}"> Invalid username and password. </div>
@@ -16,10 +16,10 @@
 <div class ="formController">
 <form th:action="@{/login}" method="post">
     <div><label class = "inputlabel"> User Name : </label></div>
-    <div><input class = "inputlabel" type="text" name="username"/></div>
+    <div><input class ="inputtype"type="text" name="username" placeholder="Enter your name"/></div>
 
     <div><label> Password: </label></div>
-    <div> <input type="password" name="password"/></div>
+    <div> <input class ="inputtype" type="password" name="password" placeholder="Enter your password"/></div>
 
     <div><input class ="inputBtn" type="submit" value="Sign In"/></div>
 </form>

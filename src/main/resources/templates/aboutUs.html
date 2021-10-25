@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Employee system</title>
     <link th:href="@{/cssAndJs/aboutUs.css}" rel="stylesheet" />
+    <script type="text/javascript" th:src="@{/cssAndJs/js/modalAboutUs.js}"></script>
+
 </head>
 <body>
 <div class = "parentDiv">
@@ -18,7 +20,7 @@
             trust me on this and just contact us for the best bla bla bla bla bla bla bla bla bla bla bla<br> <br>
             <a><b>Team members:</b> Johanna, Kristian, Suayb, Tobias.</a>
         </p>
-        <a th:href="'mailto:info@employeesystem.se'"><button class = "backHome" >Become a customer</button></a>
+        <button class ="modelbtn" data-modal-target="#modal" th:onClick="openModal(modal)">Become a customer </button>
         <a th:href="@{/home}"><button  class ="contactUs" >Back to home</button></a>
 
 
@@ -29,6 +31,24 @@
         <img th:src="@{/cssAndJs/images/team.png}"/>
     </div>
 
+
+
+    <div class ="modal" id="modal">
+        <div class = "modal-header">
+        <div class ="title">We will reach out to you!</div>
+            <button data-close-button class="close-button" th:onClick="closeModal(modal)"> &times; </button>
+        </div>
+        <div class = "modal-body"> </div>
+        <form class ="model-body-form" th:action="@{/thankyou}">
+            <input type ="text" placeholder="Company name" name ="companyName" required>
+            <input type="text" placeholder="Your full name" required name="fullname">
+            <input type="number" placeholder="Phone number+46" required name ="phone">
+            <input type ="email" placeholder="Enter your @mail" required name="mail">
+            <button class ="submitContact" type="submit">Contact me!</button>
+
+        </form>
+    </div>
+    <div  id="overlay"> </div>
 
 </div>
 

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang = "en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee System - Thank you for contacting us</title>
+    <link th:href="@{/cssAndJs/thankyou.css}" rel="stylesheet" />
+</head>
+<div class = "parentDiv">
+    <div class ="childDiv">
+        <h1> Thank you <u><span th:text="${param.fullname}" /> </u></h1>
+            <p>Your ticket #number is: <span th:text="${randomSkaicius}"></span> </p>
+            <p> We will contact you at the number: <br>
+                <u><span th:text="${param.phone}"></span></u></p>
+            <p>If you for some reason dont answer we will send you an email to: <br>
+                <u><span th:text="${param.mail}"></span></u> </p>
+            <a th:href="@{/home}"><button class = "thankyouBtn" > Back to homepage </button></a>
+    </div>
+
+</div>
+<body>
+
+</body>
+</html>

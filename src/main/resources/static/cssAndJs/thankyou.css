@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300&display=swap');
+
+body {
+    background-color: #181439;
+    font-family: 'Poppins';
+    color: white;
+}
+
+.parentDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+.childDiv {
+    text-align: center;
+}
+h1 {
+    font-size: 45px;
+}
+.childDiv u {
+    text-decoration: underline #DE306B;
+    color: #08a9ba;
+    text-underline-offset: 3px;
+
+}
+.childDiv p u {
+    font-size: 25px;
+    text-underline-offset: 3px;
+}
+.thankyouBtn {
+    font-family: 'Poppins';
+    padding: 10px;
+    color: white;
+    border: 1px solid  #DE306B;
+    background-color: #DE306B;
+    transition: 250ms ease-in;
+}
+.thankyouBtn:hover {
+    background-color: #181439;
+    transform: scale(1.12);
+}
