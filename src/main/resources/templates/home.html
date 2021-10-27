@@ -16,10 +16,13 @@
         <h1>Lets Rock-up your customers!</h1>
         <p>The best customer system in space</p>
 
-            <a th:href="@{/saveform}"><button  class ="ourCustomerBtn" >Lets Rock-employee</button></a>
+            <a th:href="@{/saveform}"><button  class ="ourCustomerBtn" >Lets Rock-customer</button></a>
             <a th:href="@{/aboutUs}"><button class = "ourAboutBtn" > About us </button></a>
         <a th:href="@{/edit}" sec:authorize="hasRole('ROLE_ADMIN')">
             <button class ="adminBtn">Edit customers</button>
+        </a>
+        <a th:href="@{/changeLog}" sec:authorize="hasRole('ROLE_USER')">
+            <button class ="adminBtn">Change Log</button>
         </a>
 
         <div class ="magicText" th:switch="${#authentication}? ${#authorization.expression('isAuthenticated()')} : ${false}">
@@ -27,6 +30,9 @@
             <span th:case="${true}"></span>
             <span th:case="*">Should never happen, but who knows...</span>
         </div>
+        <audio controls="controls" th:hidden th:volume="0.2" >
+            <source src="/cssAndJs/music/starwars.mp3" type="audio/mpeg">
+        </audio>
 
     </div>
     <div  class = "childDiv2" sec:authorize="isAuthenticated()" >
@@ -55,6 +61,8 @@
         </div>
     </div>
     <a th:href="@{/logout}"><button sec:authorize="isAuthenticated()" class = "logoutBtn" > Logout </button></a>
+    <audio id = "player" src = "../../sound/music1.mp3" th:src="@{/sound/music1.mp3}"></audio>
+
 
 </div>
 

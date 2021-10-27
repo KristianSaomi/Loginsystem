@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300&display=swap');
+body {
+    margin: 0px;
+    font-family: 'Poppins';
+    color: white;
+    background-color: #181439;
+}
+.parentDiv {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    align-items: center;
+
+}
+
+.childDiv {
+    padding: 15px;
+    margin: 10px;
+    width: auto;
+    height: auto;
+}
+.contactUs {
+    background-color: #DE306B;
+    border: none;
+    color: white;
+    transition: 250ms ease;
+    padding: 10px 20px 10px 20px;
+}
+.contactUs:hover {
+    transform: scale(1.2);
+}

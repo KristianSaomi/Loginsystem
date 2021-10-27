@@ -161,3 +161,12 @@ tr {
     background-color: #08a9ba;
     color: white;
 }
+audio {
+    float: right;
+    padding: 5px 10px 5px 10px;
+    position:absolute;
+    margin-top: 10px;
+    margin-left: 50px;
+    top:0;
+    left:0;
+}

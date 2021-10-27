@@ -14,15 +14,24 @@
     <div class = "ifparameters" th:if="${param.logout}"> You have been logged out. </div>
 
 <div class ="formController">
-<form th:action="@{/login}" method="post">
-    <div><label class = "inputlabel"> User Name : </label></div>
-    <div><input class ="inputtype"type="text" name="username" placeholder="Enter your name"/></div>
 
-    <div><label> Password: </label></div>
-    <div> <input class ="inputtype" type="password" name="password" placeholder="Enter your password"/></div>
+    <div class ="magicText" th:switch="${#authentication}? ${#authorization.expression('isAuthenticated()')} : ${false}">
+        <form  th:case="${false}" th:action="@{/login}" method="post">
+            <div><label class = "inputlabel"> User Name : </label></div>
+            <div><input class ="inputtype"type="text" name="username" placeholder="Enter your name"/></div>
 
-    <div><input class ="inputBtn" type="submit" value="Sign In"/></div>
-</form>
+            <div><label> Password: </label></div>
+            <div> <input class ="inputtype" type="password" name="password" placeholder="Enter your password"/></div>
+
+            <div><input class ="inputBtn" type="submit" value="Sign In"/></div>
+        </form>
+        <a th:case="${true}" th:href="@{/logout}"><button sec:authorize="isAuthenticated()" class = "inputBtn" > Logout </button></a>
+        <span th:case="*">Should never happen, but who knows...</span>
+    </div>
+
+
+
+
 </div>
  </div>
 </div>
